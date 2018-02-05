@@ -1,5 +1,5 @@
 //
-// Created by KZ on 2/5/2018.
+// Created by Tafseer Ahmed on 2/5/2018.
 //
 class CoverGraph {
 private:
