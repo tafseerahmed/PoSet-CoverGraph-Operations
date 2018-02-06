@@ -48,9 +48,9 @@ void CoverGraph::INIT() {
     std::cout<<"\nIncidence Matrix:\n";
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < E[i].size(); j++) {
-            std::cout<<M[i][k]<<" ";
+            std::cout<<M[i][j]<<" ";
         }
-        std::endl;
+        std::cout<<std::endl;
     }
     std::cout<<"\nIncidence Edge Vector:\n";
     for (int i = 0; i < N; i++) std::cout<<V[i]<<" ";
