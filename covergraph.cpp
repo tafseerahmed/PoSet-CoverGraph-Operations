@@ -11,7 +11,7 @@ CoverGraph::CoverGraph(unsigned int size) {
     std::cout << "Enter labels for each node \n";
     std::string label;
     for (int i = 0; i < N; i++) {
-        std::cout << "\n Node " << i << " :";
+        std::cout << "Node " << i << " :";
         std::cin >> label;
         P.push_back(make_pair(i, label));
     }
@@ -45,7 +45,16 @@ void CoverGraph::INIT() {
             V[k]++;
         }
     }
-    std::cout << "Data Structure successfully initialized!\n";
+    std::cout<<"\nIncidence Matrix:\n";
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < E[i].size(); j++) {
+            std::cout<<M[i][k]<<" ";
+        }
+        std::endl;
+    }
+    std::cout<<"\nIncidence Edge Vector:\n";
+    for (int i = 0; i < N; i++) std::cout<<V[i]<<" ";
+    std::cout << "\nData Structure successfully initialized!\n";
 }
 
 void CoverGraph::DelMin() {
