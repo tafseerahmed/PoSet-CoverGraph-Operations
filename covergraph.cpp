@@ -7,7 +7,7 @@
 #include "covergraph.h"
 
 CoverGraph::CoverGraph(unsigned int size) {
-    N=size;
+    N = size;
     std::cout << "Enter labels for each node \n";
     std::string label;
     for (int i = 0; i < N; i++) {
@@ -19,7 +19,7 @@ CoverGraph::CoverGraph(unsigned int size) {
     std::cout << "Enter Adjacency list E, '-1' terminates list \n";
     for (int i = 0; i < N; i++) {
         int x;
-        std::cout<<"Add edges for Node "<<P[i].second<<" ("<<i<<"): ";
+        std::cout << "Add edges for Node " << P[i].second << " (" << i << "): ";
         std::cin >> x;
         while (x != -1) {
             E[i].push_back(x);
@@ -45,7 +45,7 @@ void CoverGraph::INIT() {
             V[k]++;
         }
     }
-    std::cout<<"Data Structure successfully initialized!\n";
+    std::cout << "Data Structure successfully initialized!\n";
 }
 
 void CoverGraph::DelMin() {
@@ -53,7 +53,7 @@ void CoverGraph::DelMin() {
     for (int i = 0; i < N; i++) {
         std::cout << i << " - " << P[i].second;
         if (V[i] == 0) std::cout << " (Minimal)";
-        else if (V[i]<0) std::cout<< "(Deleted)";
+        else if (V[i] < 0) std::cout << "(Deleted)";
         std::cout << std::endl;
     }
     std::cout << "Enter minimal element's node number to be deleted: ";
@@ -67,11 +67,11 @@ void CoverGraph::DelMin() {
             V[k]--;
         }
     }
-    std::cout <<"Minimal element " << P[x].second <<" has been deleted successfully! \n";
+    std::cout << "Minimal element " << P[x].second << " has been deleted successfully! \n";
 }
 
 void CoverGraph::ListMin() {
-    std::cout<<"List of Minimal elements is\n"
+    std::cout << "List of Minimal elements is\n";
     for (int i = 0; i < N; i++) {
         if (V[i] == 0) std::cout << i << " - " << P[i].second << std::endl;
     }
