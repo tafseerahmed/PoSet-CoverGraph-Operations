@@ -1,11 +1,11 @@
 //
-// Created by Tafseer Ahmed on 2/5/2018.
+// Created by KZ on 2/5/2018.
 //
 class CoverGraph {
 private:
     unsigned int N; // Nodes in Graph taken as an input through user at the time of execution of program.
     std::vector<std::pair<unsigned int, std::string>> P; // P is the set of nodes in the PoSet's cover graph
-    std::vector<std::vector<int>> E,M; // E is the adjacency list showing edges in the cover graph. M is incidence matrix
+    std::vector<std::vector<int>> E, M; // E is the adjacency list showing edges in the cover graph. M is incidence matrix
     std::vector<int> V;// V is incidence edge vector
 public:
     /*
@@ -21,6 +21,7 @@ public:
      constructed data structure.
      */
     void INIT();
+
     /*
      DelMin() function takes an input inside the function which
      is more convenient and first prints the list of available
@@ -33,12 +34,14 @@ public:
      it reports the error.
      */
     void DelMin();
+
     /*
     ListMin prints the list of minimal elements by iterating
      all the nodes in the incidence edge vector and printing
      only if the value is 0.
      */
     void ListMin();
+
     /* Cover Graph constructor*/
     CoverGraph(unsigned int);
 };
